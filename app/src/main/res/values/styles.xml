@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="AppToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextAppearance">@style/AppTextTitle.S18</item>
+    </style>
     <style name="AppTextTitle">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="AppTextTitle.S18">
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTextTitle.S14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTextCaption">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray_300</item>
+    </style>
+
+    <style name="AppTextCaption.S12">
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="AppTextPrimary">

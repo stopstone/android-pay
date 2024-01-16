@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/appbar_title_payment_method_screen"
-        app:titleTextAppearance="@style/AppTextTitle"
+        style="@style/AppTextTitle.S18"
         app:navigationIcon="@drawable/ic_arrow_back"/>
 
 

@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_transfer"
-        android:name="com.stopstone.payapp.TransferFragment"
+        android:name="com.stopstone.payapp.TransferAccountFragment"
         android:label="TransferFragment"
-        tools:layout="@layout/fragment_transfer" />
+        tools:layout="@layout/fragment_transfer_account" />
     <fragment
         android:id="@+id/navigation_payment_method"
         android:name="com.stopstone.payapp.PaymentMethodFragment"

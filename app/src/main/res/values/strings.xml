@@ -12,4 +12,5 @@
 
     <!--   Payment Method    -->
     <string name="appbar_title_payment_method_screen">결제 수단 등록</string>
+    <string name="description_account_profile_image">송금할 계좌의 프로필 이미지</string>
 </resources>

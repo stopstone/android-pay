@@ -28,6 +28,7 @@ class HomeFragment: Fragment() {
             findNavController().navigate(action)
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

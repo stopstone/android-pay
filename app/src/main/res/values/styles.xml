@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTextTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_700</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTextPrimary">
+        <item name="android:textColor">@color/blue_500</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.stopstone.payapp.databinding.FragmentTransferAccountBinding
 
-class TransferAccountFragment: Fragment() {
+class TransferAccountFragment : Fragment() {
 
     private var _binding: FragmentTransferAccountBinding? = null
     private val binding get() = _binding!!
@@ -19,6 +20,11 @@ class TransferAccountFragment: Fragment() {
     ): View? {
         _binding = FragmentTransferAccountBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.rvTransferAccountList.adapter = TransferAccountListAdapter(getDummyData())
     }
 
     override fun onDestroy() {

@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/app_name"
-        style="@style/AppTextTitle.S18"/>
+        style="@style/AppToolbar"/>
 
     <View
         android:id="@+id/view_card_area"

@@ -13,4 +13,12 @@
     <!--   Payment Method    -->
     <string name="appbar_title_payment_method_screen">결제 수단 등록</string>
     <string name="description_account_profile_image">송금할 계좌의 프로필 이미지</string>
+    <string name="label_payment_card_number">카드번호</string>
+    <string name="hint_input_card_number">Card Number</string>
+    <string name="label_valid_date">유효기간</string>
+    <string name="hint_input_valid_date">MM / YY</string>
+    <string name="label_password">비밀번호 앞 2자리</string>
+    <string name="hint_input_password">●●</string>
+    <string name="label_card_name">카드이름</string>
+    <string name="hint_input_card_name">카드 이름 입력</string>
 </resources>

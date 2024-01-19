@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_account_image"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#4CAF50"
+        app:shapeAppearanceOverlay="@style/AppRoundedImage"/>
+
+    <TextView
+        android:id="@+id/tv_account_name"
+        style="@style/AppTextTitle.S14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_account_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="정지석" />
+
+    <TextView
+        android:id="@+id/tv_account_bank_name"
+        style="@style/AppTextCaption.S12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_account_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_account_name"
+        tools:text="농협은행" />
+
+    <TextView
+        android:id="@+id/tv_account_number"
+        style="@style/AppTextCaption.S12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_account_bank_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_account_bank_name"
+        app:layout_constraintTop_toTopOf="@id/tv_account_bank_name"
+        tools:text="356 0608 8388 33" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

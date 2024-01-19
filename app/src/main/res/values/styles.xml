@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppToolbar" parent="Widget.MaterialComponents.Toolbar">
+    <style name="AppToolbar" parent="Widget.Material3.Toolbar">
         <item name="titleTextAppearance">@style/AppTextTitle.S18</item>
     </style>
+
+    <style name="AppRoundedImage">
+        <item name="cornerSize">13dp</item>
+    </style>
+
     <style name="AppTextTitle">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/gray_700</item>
@@ -14,6 +19,15 @@
     </style>
 
     <style name="AppTextTitle.S14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTextHint">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray_800</item>
+    </style>
+
+    <style name="AppTextHint.S14">
         <item name="android:textSize">14sp</item>
     </style>
 

@@ -5,6 +5,25 @@
         <item name="titleTextAppearance">@style/AppTextTitle.S18</item>
     </style>
 
+    <style name="AppEditText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:paddingStart">11dp</item>
+        <item name="android:paddingEnd">11dp</item>
+        <item name="android:textColor">@color/selector_background_text_color</item>
+        <item name="android:background">@drawable/selector_input_text_background</item>
+        <item name="android:textColorHint">@color/gray_200</item>
+        <item name="fontWeight">500</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AppButtonBackground">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/selector_button_background</item>
+    </style>
+
     <style name="AppRoundedImage">
         <item name="cornerSize">13dp</item>
     </style>

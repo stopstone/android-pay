@@ -21,4 +21,5 @@
     <string name="hint_input_password">●●</string>
     <string name="label_card_name">카드이름</string>
     <string name="hint_input_card_name">카드 이름 입력</string>
+    <string name="btn_label_confirm">확인</string>
 </resources>

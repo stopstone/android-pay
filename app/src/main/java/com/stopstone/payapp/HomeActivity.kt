@@ -2,8 +2,11 @@ package com.stopstone.payapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -23,5 +26,13 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.container_home) as NavHostFragment
         val navController = navHostFragment.navController
         binding.bottomNavigationHome.setupWithNavController(navController)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            when (destination.id) {
+                R.id.navigation_home, R.id.navigation_transfer ->
+                    binding.bottomNavigationHome.visibility = View.VISIBLE
+
+                else -> binding.bottomNavigationHome.visibility = View.GONE
+            }
+        }
     }
 }

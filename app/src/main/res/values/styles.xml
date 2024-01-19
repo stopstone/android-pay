@@ -11,11 +11,9 @@
         <item name="android:paddingBottom">14dp</item>
         <item name="android:paddingStart">11dp</item>
         <item name="android:paddingEnd">11dp</item>
-        <item name="android:textColor">@color/selector_background_text_color</item>
+        <item name="android:textColor">@color/gray_700</item>
         <item name="android:background">@drawable/selector_input_text_background</item>
         <item name="android:textColorHint">@color/gray_200</item>
-        <item name="fontWeight">500</item>
-        <item name="fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="AppButtonBackground">

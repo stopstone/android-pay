@@ -5,6 +5,10 @@
         <item name="titleTextAppearance">@style/AppTextTitle.S18</item>
     </style>
 
+    <style name="AppToolbar.Navigation" parent="Widget.Material3.Toolbar">
+        <item name="navigationIcon">@drawable/ic_arrow_back</item>
+    </style>
+
     <style name="AppEditText">
         <item name="android:textSize">14sp</item>
         <item name="android:paddingTop">14dp</item>

@@ -1,8 +1,9 @@
-package com.stopstone.payapp
+package com.stopstone.payapp.ui.transferaccount
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.stopstone.payapp.data.Account
 import com.stopstone.payapp.databinding.ItemTransferAccountBinding
 
 class TransferAccountListAdapter(

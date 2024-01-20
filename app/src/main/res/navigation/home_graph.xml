@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.stopstone.payapp.HomeFragment"
+        android:name="com.stopstone.payapp.ui.home.HomeFragment"
         android:label="@string/label_home_screen"
         tools:layout="@layout/fragment_home">
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_transfer"
-        android:name="com.stopstone.payapp.TransferAccountFragment"
+        android:name="com.stopstone.payapp.ui.transferaccount.TransferAccountFragment"
         android:label="TransferFragment"
-        tools:layout="@layout/fragment_transfer_account" />
+        tools:layout="@layout/fragment_transfer_account"/>
     <fragment
         android:id="@+id/navigation_payment_method"
-        android:name="com.stopstone.payapp.PaymentMethodFragment"
+        android:name="com.stopstone.payapp.ui.payment.PaymentMethodFragment"
         android:label="PaymentMethodFragment"
         tools:layout="@layout/fragment_payment_method">
         <action
@@ -30,10 +30,16 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_payment_registration"
-        android:name="com.stopstone.payapp.PaymentRegistrationFragment"
+        android:name="com.stopstone.payapp.ui.payment.PaymentRegistrationFragment"
         android:label="PaymentRegistrationFragment"
-        tools:layout="@layout/fragment_payment_registration"
+        tools:layout="@layout/fragment_payment_registration">
         <argument
-            />
-        />
+            android:name="paymentMethod"
+            app:argType="com.stopstone.payapp.data.PaymentMethod" />
+        <action
+            android:id="@+id/action_payment_registration_to_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

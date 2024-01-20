@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar_home"
+        style="@style/AppToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/app_name"
-        style="@style/AppToolbar"/>
+        app:title="@string/app_name" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="view_card_area, iv_add_card, tv_add_card" />
 
     <View
         android:id="@+id/view_card_area"
@@ -51,4 +59,61 @@
         app:layout_constraintEnd_toEndOf="@id/view_card_area"
         app:layout_constraintStart_toStartOf="@id/view_card_area"
         app:layout_constraintTop_toBottomOf="@id/iv_add_card" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="view_payment_method_area, tv_payment_method_label, tv_payment_method_balance, btn_payment"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/view_payment_method_area"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_blue500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_home" />
+
+    <TextView
+        android:id="@+id/tv_payment_method_label"
+        style="@style/AppTextOnPrimary.S14.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="@id/view_payment_method_area"
+        app:layout_constraintStart_toStartOf="@id/view_payment_method_area"
+        app:layout_constraintTop_toTopOf="@id/view_payment_method_area"
+        tools:text="생활비" />
+
+
+    <TextView
+        android:id="@+id/tv_payment_method_balance"
+        style="@style/AppTextOnPrimary.S24.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_payment_method_label"
+        app:layout_constraintStart_toStartOf="@id/tv_payment_method_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_payment_method_label"
+        tools:text="7,500,000원" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_payment"
+        style="@style/AppButtonOnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btn_label_payment"
+        app:layout_constraintBottom_toBottomOf="@id/view_payment_method_area"
+        app:layout_constraintEnd_toEndOf="@id/view_payment_method_area"
+        app:layout_constraintStart_toStartOf="@id/view_payment_method_area" />
 </androidx.constraintlayout.widget.ConstraintLayout>

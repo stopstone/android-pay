@@ -1,9 +1,15 @@
 <resources>
+    <!--    Common    -->
+    <string name="btn_label_confirm">확인</string>
+
+
     <!--    Home    -->
-    <string name="app_name">원밀리언페이</string>
+    <string name="app_name">연습페이</string>
     <string name="label_home_screen">홈</string>
     <string name="label_transfer_screen">송금</string>
     <string name="label_add_card">결제 수단을 등록해주세요</string>
+    <string name="btn_label_payment">결제하기</string>
+
 
     <!--    Transfer    -->
     <string name="appbar_title_transfer_screen">누구에게 보낼까요?</string>
@@ -21,5 +27,12 @@
     <string name="hint_input_password">●●</string>
     <string name="label_card_name">카드이름</string>
     <string name="hint_input_card_name">카드 이름 입력</string>
-    <string name="btn_label_confirm">확인</string>
+
+    <!--   Payment Registration    -->
+    <string name="guide_payment_success_message">결제 수단이 정상적으로\n등록 되었어요</string>
+    <string name="guide_payment_failure_message">오류가 발생하였습니다.\n 결제 수단 등록을 다시 해주세요.</string>
+    <string name="btn_label_retry">재시도</string>
+
+
+
 </resources>

@@ -26,6 +26,11 @@
         <item name="android:background">@drawable/selector_button_background</item>
     </style>
 
+    <style name="AppButtonOnPrimary">
+        <item name="android:textAppearance">@style/AppTextOnPrimary.S14</item>
+        <item name="android:background">@drawable/background_button_on_primary</item>
+    </style>
+    
     <style name="AppRoundedImage">
         <item name="cornerSize">13dp</item>
     </style>
@@ -33,6 +38,10 @@
     <style name="AppTextTitle">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="AppTextTitle.S20">
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="AppTextTitle.S18">
@@ -66,4 +75,24 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="AppTextOnPrimary">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTextOnPrimary.S14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTextOnPrimary.S24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AppTextOnPrimary.S14.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextOnPrimary.S24.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

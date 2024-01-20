@@ -1,24 +1,28 @@
-package com.stopstone.payapp
+package com.stopstone.payapp.ui.payment
 
 import android.os.Bundle
 import android.text.InputFilter
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.stopstone.payapp.data.PaymentMethod
 import com.stopstone.payapp.databinding.FragmentPaymentMethodBinding
 
 private const val PASSWORD_FORMAT_LENGTH = 2
 private const val DURATION_FORMAT_LENGTH = 4
 private const val DURATION_FORMAT_DELIMITER = "/"
-
 class PaymentMethodFragment : Fragment() {
 
     private var _binding: FragmentPaymentMethodBinding? = null
     private val biding get() = _binding!!
+
+    private var cardNumber = ""
+    private var validMonth = ""
+    private var validYear = ""
+    private var cardName = ""
 
     private var isValidCardNumber = false
     private var isValidDate = false
@@ -46,7 +50,7 @@ class PaymentMethodFragment : Fragment() {
     private fun setTextInput() {
         isValidMaxLength()
         biding.etInputCardNumber.doAfterTextChanged {
-            val cardNumber = it?.toString() ?: ""
+            cardNumber = it?.toString() ?: ""
             isValidCardNumber = isValidText(cardNumber)
             updateButtonEnableState()
         }
@@ -72,7 +76,7 @@ class PaymentMethodFragment : Fragment() {
             updateButtonEnableState()
         }
         biding.etInputCardName.doAfterTextChanged {
-            val cardName = it?.toString() ?: ""
+            cardName = it?.toString() ?: ""
             isValidCardName = isValidText(cardName)
             updateButtonEnableState()
         }
@@ -99,9 +103,9 @@ class PaymentMethodFragment : Fragment() {
 
     private fun applyDurationFormat(text: String) {
         val monthCharacterSize = 2
-        val month = text.substring(0, monthCharacterSize)
-        val year = text.substring(monthCharacterSize, DURATION_FORMAT_LENGTH)
-        biding.etInputValidDate.setText("$month$DURATION_FORMAT_DELIMITER$year")
+        validMonth = text.substring(0, monthCharacterSize)
+        validYear = text.substring(monthCharacterSize, DURATION_FORMAT_LENGTH)
+        biding.etInputValidDate.setText("$validMonth$DURATION_FORMAT_DELIMITER$validYear")
         biding.etInputValidDate.setSelection(DURATION_FORMAT_LENGTH + 1)
     }
 
@@ -121,13 +125,22 @@ class PaymentMethodFragment : Fragment() {
 
     private fun setSubmitPaymentInfo() {
         biding.btnSubmitCardInfo.setOnClickListener {
-            val action = PaymentMethodFragmentDirections.actionPaymentMethodToPaymentRegistration()
+            val paymentMethod = PaymentMethod(
+                cardNumber = cardNumber,
+                validMonth = validMonth,
+                validYear = validYear,
+                cardName = cardName,
+            )
+            val action =
+                PaymentMethodFragmentDirections.actionPaymentMethodToPaymentRegistration(
+                    paymentMethod
+                )
             findNavController().navigate(action)
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 }

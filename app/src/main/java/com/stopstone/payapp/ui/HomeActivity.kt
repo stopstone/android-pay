@@ -1,15 +1,11 @@
-package com.stopstone.payapp
+package com.stopstone.payapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import androidx.navigation.NavController
-import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.stopstone.payapp.R
 import com.stopstone.payapp.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {

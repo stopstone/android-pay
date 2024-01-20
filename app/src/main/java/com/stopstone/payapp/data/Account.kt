@@ -1,4 +1,4 @@
-package com.stopstone.payapp
+package com.stopstone.payapp.data
 
 data class Account(
     val profileResourceId: Int,

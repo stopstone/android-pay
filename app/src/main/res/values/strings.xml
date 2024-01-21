@@ -19,6 +19,9 @@
     <string name="appbar_title_transfer">얼마를 보낼까요?</string>
 
 
+    <!--  Transfer confirm dialog  -->
+    <string name="format_transfer_info">"%1$s에게 %2$s원을\n이체하시겠습니까?"</string>
+    
     <!--   Payment Method    -->
     <string name="appbar_title_payment_method_screen">결제 수단 등록</string>
     <string name="description_account_profile_image">송금할 계좌의 프로필 이미지</string>
@@ -47,6 +50,7 @@
     <string name="label_number_9">9</string>
     <string name="label_number_two_zeros">00</string>
     <string name="label_number_zero">0</string>
+    <string name="description_confirm_dialog_image">송금 앱 로고</string>
 
 
 </resources>

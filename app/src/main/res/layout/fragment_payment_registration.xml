@@ -30,7 +30,8 @@
         android:src="@drawable/icon_success"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_payment_registration" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_payment_registration"
+        android:contentDescription="결제수단 등록 성공을 알리는 이미지" />
 
     <TextView
         android:id="@+id/tv_payment_method_success_message"
@@ -50,7 +51,7 @@
 
     <Button
         android:id="@+id/btn_exit_payment_method"
-        style="@style/AppButtonBackground"
+        style="@style/AppButtonPrimary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -88,7 +89,7 @@
 
     <Button
         android:id="@+id/btn_retry_payment_method"
-        style="@style/AppButtonBackground"
+        style="@style/AppButtonPrimary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

@@ -15,10 +15,14 @@
             app:destination="@id/navigation_payment_method" />
     </fragment>
     <fragment
-        android:id="@+id/navigation_transfer"
+        android:id="@+id/navigation_transfer_account"
         android:name="com.stopstone.payapp.ui.transferaccount.TransferAccountFragment"
         android:label="TransferFragment"
-        tools:layout="@layout/fragment_transfer_account"/>
+        tools:layout="@layout/fragment_transfer_account">
+        <action
+            android:id="@+id/action_transfer_account_to_transfer"
+            app:destination="@id/navigation_transfer" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_payment_method"
         android:name="com.stopstone.payapp.ui.payment.PaymentMethodFragment"
@@ -41,5 +45,15 @@
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_home"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_transfer"
+        android:name="com.stopstone.payapp.ui.transfer.TransferFragment"
+        android:label="TransferFragment"
+        tools:layout="@layout/fragment_transfer">
+        <argument
+            android:name="account"
+            app:argType="com.stopstone.payapp.data.Account"
+            />
     </fragment>
 </navigation>

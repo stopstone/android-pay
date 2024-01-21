@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_transfer"
+        style="@style/AppToolbar.Navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/appbar_title_transfer" />
+
+    <View
+        android:id="@+id/view_transfer_account_area"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_blue200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_transfer" />
+
+    <include
+        android:id="@+id/layout_transfer_account"
+        layout="@layout/item_transfer_account"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_transfer_account_area"
+        app:layout_constraintEnd_toEndOf="@id/view_transfer_account_area"
+        app:layout_constraintStart_toStartOf="@id/view_transfer_account_area"
+        app:layout_constraintTop_toTopOf="@id/view_transfer_account_area" />
+
+    <TextView
+        android:id="@+id/tv_label_transfer_amount"
+        style="@style/AppTextPlaceHolder.S40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/label_transfer_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_transfer_account"
+        app:layout_constraintBottom_toTopOf="@+id/flow_keypad_helper"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_1"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_2"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_3"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_4"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_5"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_6"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_7"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_8"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_9"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_00"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_two_zeros" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_number_0"
+        style="@style/AppButtonKeyPad.Text"
+        android:text="@string/label_number_zero" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_number_delete"
+        style="@style/AppButtonKeyPad"
+        android:src="@drawable/ic_delete"
+        android:text="@string/label_number_zero" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_keypad_helper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:constraint_referenced_ids="btn_number_1,btn_number_2,,btn_number_3,btn_number_4,btn_number_5,btn_number_6,btn_number_7,btn_number_8,btn_number_9,btn_number_00,btn_number_0,btn_number_delete"
+        app:flow_horizontalStyle="spread"
+        app:flow_maxElementsWrap="3"
+        app:flow_verticalGap="20dp"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit_transfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit_transfer"
+        style="@style/AppButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:enabled="false"
+        android:text="@string/btn_label_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

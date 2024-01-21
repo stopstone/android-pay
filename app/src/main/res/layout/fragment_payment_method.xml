@@ -128,7 +128,7 @@
 
     <Button
         android:id="@+id/btn_submit_card_info"
-        style="@style/AppButtonBackground"
+        style="@style/AppButtonPrimary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

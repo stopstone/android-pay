@@ -15,7 +15,7 @@
         android:layout_height="42dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="#4CAF50"
+        tools:background="@color/gray_700"
         app:shapeAppearanceOverlay="@style/AppRoundedImage"/>
 
     <TextView

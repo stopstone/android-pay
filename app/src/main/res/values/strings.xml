@@ -11,9 +11,12 @@
     <string name="btn_label_payment">결제하기</string>
 
 
-    <!--    Transfer    -->
+    <!--    Transfer Account   -->
     <string name="appbar_title_transfer_screen">누구에게 보낼까요?</string>
     <string name="description_add_card">카드 추가를 안내하는 이미지</string>
+
+    <!--    Transfer   -->
+    <string name="appbar_title_transfer">얼마를 보낼까요?</string>
 
 
     <!--   Payment Method    -->
@@ -32,7 +35,18 @@
     <string name="guide_payment_success_message">결제 수단이 정상적으로\n등록 되었어요</string>
     <string name="guide_payment_failure_message">오류가 발생하였습니다.\n 결제 수단 등록을 다시 해주세요.</string>
     <string name="btn_label_retry">재시도</string>
-
+    <string name="label_transfer_amount">보낼 금액</string>
+    <string name="label_number_1">1</string>
+    <string name="label_number_2">2</string>
+    <string name="label_number_3">3</string>
+    <string name="label_number_4">4</string>
+    <string name="label_number_5">5</string>
+    <string name="label_number_6">6</string>
+    <string name="label_number_7">7</string>
+    <string name="label_number_8">8</string>
+    <string name="label_number_9">9</string>
+    <string name="label_number_two_zeros">00</string>
+    <string name="label_number_zero">0</string>
 
 
 </resources>

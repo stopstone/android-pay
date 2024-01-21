@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigationHome.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             when (destination.id) {
-                R.id.navigation_home, R.id.navigation_transfer ->
+                R.id.navigation_home, R.id.navigation_transfer_account ->
                     binding.bottomNavigationHome.visibility = View.VISIBLE
 
                 else -> binding.bottomNavigationHome.visibility = View.GONE

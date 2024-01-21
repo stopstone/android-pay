@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_home"
         android:title="@string/label_home_screen" />
     <item
-        android:id="@+id/navigation_transfer"
+        android:id="@+id/navigation_transfer_account"
         android:icon="@drawable/ic_transfer"
         android:title="@string/label_transfer_screen" />
 </menu>

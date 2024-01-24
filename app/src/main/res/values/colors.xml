@@ -9,6 +9,7 @@
     <color name="gray_200">#AFBACA</color>
     <color name="gray_150">#B4B9C2</color>
     <color name="gray_100">#D7DCE4</color>
+    <color name="gray_50">#E5E8EB</color>
     <color name="blue_500">#337CFF</color>
     <color name="blue_200">#EEF4FF</color>
 </resources>

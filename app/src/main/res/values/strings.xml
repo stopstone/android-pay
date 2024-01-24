@@ -3,6 +3,7 @@
     <string name="btn_label_confirm">확인</string>
     <string name="btn_label_cancel">취소</string>
     <string name="description_payment_success_image">결제수단 등록 성공을 알리는 이미지</string>
+    <string name="format_amount_unit">%s원</string>
 
 
     <!--    Home    -->
@@ -11,6 +12,7 @@
     <string name="label_transfer_screen">송금</string>
     <string name="label_add_card">결제 수단을 등록해주세요</string>
     <string name="btn_label_payment">결제하기</string>
+    <string name="label_transfer_history">송금내역</string>
 
 
     <!--    Transfer Account   -->
@@ -59,7 +61,8 @@
     <string name="label_number_two_zeros">00</string>
     <string name="label_number_zero">0</string>
     <string name="description_confirm_dialog_image">송금 앱 로고</string>
-    <string name="label_transfer_history">송금내역</string>
+    <string name="guide_message_empty_transfer_history">아직 거래 내역이 없어요</string>
+    <string name="appbar_title_transfer_title">이체 상세 내역</string>
 
 
 </resources>

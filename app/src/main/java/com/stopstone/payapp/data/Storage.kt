@@ -1,11 +1,15 @@
 package com.stopstone.payapp.data
 
 import com.stopstone.payapp.R
+import com.stopstone.payapp.utils.DateFormatText.getCurrentDate
 
 object Storage {
     val accountList: List<Account> = getDummyData()
     var paymentMethod: PaymentMethod? = null
         private set
+
+    private val transferHistory = mutableListOf<Transfer>()
+
     private fun getDummyData(): List<Account> {
         return listOf(
             Account(R.drawable.img_1, "정지석", "농협은행", "356 0608 8388 33"),
@@ -26,12 +30,16 @@ object Storage {
         return true
     }
 
-    fun postTransfer(account:Account, amount: Long): Boolean {
+    fun postTransfer(account: Account, amount: Long): Boolean {
         paymentMethod?.run {
             val newBalance = cardBalance - amount
             paymentMethod = copy(cardBalance = newBalance)
-
+            transferHistory.add(Transfer(account, amount, newBalance, getCurrentDate()))
         }
         return true
+    }
+
+    fun getTransferHistory(): List<Transfer> = transferHistory.sortedByDescending {
+        it.sendDate
     }
 }

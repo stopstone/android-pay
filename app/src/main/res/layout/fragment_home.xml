@@ -128,7 +128,6 @@
         android:layout_marginTop="233dp"
         android:layout_marginEnd="16dp"
         android:text="@string/label_transfer_history"
-        app:layout_constraintBottom_toTopOf="@id/rv_home_transfer_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_home" />
@@ -140,24 +139,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="178dp"
         android:gravity="center"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@id/tv_home_transfer_history"
         app:layout_constraintStart_toStartOf="@id/tv_home_transfer_history"
-        app:layout_constraintTop_toTopOf="@id/tv_home_transfer_history"
-        tools:text="아직 거래 내역이 없어요"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_transfer_history"
+        android:text="@string/guide_message_empty_transfer_history"
         tools:visibility="visible" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_home_transfer_history"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         android:orientation="vertical"
         tools:visibility="visible"
         tools:listitem="@layout/item_transfer_history"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/tv_home_transfer_history"
-        app:layout_constraintStart_toStartOf="@id/tv_home_transfer_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_home_transfer_history" />
 </androidx.constraintlayout.widget.ConstraintLayout>

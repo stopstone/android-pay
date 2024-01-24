@@ -91,7 +91,8 @@ class TransferFragment : Fragment() {
             if (current.isNotEmpty()) {
                 val new = current.substring(0, current.lastIndex)
                 if (new.isNotEmpty()) {
-                    binding.tvTransferAmount.applyNumberFormat(new.toLong())
+                    amount = new.toLong()
+                    binding.tvTransferAmount.applyNumberFormat(amount)
                 }
                 if (new.isEmpty()) {
                     binding.tvTransferAmount.text = ""

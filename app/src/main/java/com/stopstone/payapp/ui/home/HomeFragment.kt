@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.stopstone.payapp.data.PaymentMethod
 import com.stopstone.payapp.data.Storage
+import com.stopstone.payapp.data.Transfer
 import com.stopstone.payapp.databinding.FragmentHomeBinding
+import com.stopstone.payapp.ui.extensions.convertThreeDigitComma
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -31,6 +33,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun setLayout() {
+        setPaymentInfo()
+        setTransferHistory()
+    }
+
+    private fun setPaymentInfo() {
         val paymentMethod = Storage.paymentMethod
 
         if (paymentMethod != null) {
@@ -40,12 +47,21 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun setTransferHistory() {
+        val transferHistory = Storage.getTransferHistory()
+        if (transferHistory.isNotEmpty()) {
+            showTransferHistory(transferHistory)
+        } else {
+            setEmptyTransferHistory()
+        }
+    }
+
     private fun showPaymentMethod(paymentMethod: PaymentMethod) {
         with(binding) {
             groupPaymentMethod.visibility = VISIBLE
             groupAddCard.visibility = GONE
             tvPaymentMethodLabel.text = paymentMethod.cardName
-            tvPaymentMethodBalance.text = paymentMethod.cardBalance.toString()
+            tvPaymentMethodBalance.text = paymentMethod.cardBalance.convertThreeDigitComma()
         }
     }
 
@@ -58,6 +74,21 @@ class HomeFragment : Fragment() {
                     HomeFragmentDirections.actionHomeToPaymentMethodFragment()
                 findNavController().navigate(action)
             }
+        }
+    }
+
+    private fun showTransferHistory(transferHistory: List<Transfer>) {
+        with(binding) {
+            rvHomeTransferHistory.visibility = VISIBLE
+            tvTransferHistory.visibility = GONE
+            rvHomeTransferHistory.adapter = TransferListAdapter(transferHistory)
+        }
+    }
+
+    private fun setEmptyTransferHistory() {
+        with(binding) {
+            tvTransferHistory.visibility = VISIBLE
+            rvHomeTransferHistory.visibility = GONE
         }
     }
 

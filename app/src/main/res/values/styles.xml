@@ -67,6 +67,10 @@
         <item name="android:textSize">40sp</item>
     </style>
 
+    <style name="AppTextTitle.S24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
     <style name="AppTextTitle.S20">
         <item name="android:textSize">20sp</item>
     </style>
@@ -159,6 +163,10 @@
     <style name="AppTextBody">
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/gray_700</item>
+    </style>
+
+    <style name="AppTextBody.S14">
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="AppTextBody.S18">

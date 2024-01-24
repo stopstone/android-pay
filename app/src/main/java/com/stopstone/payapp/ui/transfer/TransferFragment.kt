@@ -54,6 +54,10 @@ class TransferFragment : Fragment() {
                 )
                 findNavController().navigate(action)
             }
+
+            toolbarTransfer.setNavigationOnClickListener {
+                findNavController().navigateUp()
+            }
         }
     }
 

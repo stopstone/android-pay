@@ -25,4 +25,13 @@ object Storage {
         // TODO Network
         return true
     }
+
+    fun postTransfer(account:Account, amount: Long): Boolean {
+        paymentMethod?.run {
+            val newBalance = cardBalance - amount
+            paymentMethod = copy(cardBalance = newBalance)
+
+        }
+        return true
+    }
 }

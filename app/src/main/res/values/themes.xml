@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/blue_500</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:colorBackground">@color/white</item>
+        <item name="bottomSheetStyle">@style/AppBottomSheetModal</item>
     </style>
 
     <style name="Theme.PayApp" parent="Base.Theme.PayApp" />

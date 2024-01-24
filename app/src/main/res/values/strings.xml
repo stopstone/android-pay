@@ -1,6 +1,8 @@
 <resources>
     <!--    Common    -->
     <string name="btn_label_confirm">확인</string>
+    <string name="btn_label_cancel">취소</string>
+    <string name="description_payment_success_image">결제수단 등록 성공을 알리는 이미지</string>
 
 
     <!--    Home    -->
@@ -21,7 +23,13 @@
 
     <!--  Transfer confirm dialog  -->
     <string name="format_transfer_info">"%1$s에게 %2$s원을\n이체하시겠습니까?"</string>
-    
+    <string name="format_transfer_account">"%1$s %2$s"</string>
+    <string name="btn_transfer_confirm">"이체하기"</string>
+
+    <!--    Transfer result  -->
+    <string name="format_confirm_info">"%1$s의 계좌로\n%2$s원을 이체했어요."</string>
+    <string name="guide_transfer_failure_message">계좌이체에 실패했어요.</string>
+
     <!--   Payment Method    -->
     <string name="appbar_title_payment_method_screen">결제 수단 등록</string>
     <string name="description_account_profile_image">송금할 계좌의 프로필 이미지</string>
@@ -51,6 +59,7 @@
     <string name="label_number_two_zeros">00</string>
     <string name="label_number_zero">0</string>
     <string name="description_confirm_dialog_image">송금 앱 로고</string>
+    <string name="label_transfer_history">송금내역</string>
 
 
 </resources>

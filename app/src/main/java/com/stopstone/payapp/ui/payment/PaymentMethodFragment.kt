@@ -40,6 +40,9 @@ class PaymentMethodFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setLayout()
+        biding.toolbarPaymentMethod.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     private fun setLayout() {

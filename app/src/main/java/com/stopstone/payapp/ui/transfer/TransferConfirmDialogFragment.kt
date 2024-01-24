@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.stopstone.payapp.R
@@ -31,11 +32,22 @@ class TransferConfirmDialogFragment : BottomSheetDialogFragment() {
     }
 
     private fun setLayout() {
-        binding.tvTransferMessage.applyBoldStyle(
-            R.string.format_transfer_info,
-            args.account.holderName,
-            args.amount.convertThreeDigitComma()
-        )
+        val account = args.account
+        with(binding) {
+            tvTransferMessage.applyBoldStyle(
+                R.string.format_transfer_info,
+                args.account.holderName,
+                args.amount.convertThreeDigitComma()
+            )
+
+            tvTransferAccount.text =
+                getString(R.string.format_transfer_account, account.bankName, account.accountNumber)
+
+            btnTransferConfirm.setOnClickListener {
+                val action = TransferConfirmDialogFragmentDirections.actionTransferConfirmDialogToResult(account, args.amount)
+                findNavController().navigate(action)
+            }
+        }
     }
 
     override fun onDestroyView() {

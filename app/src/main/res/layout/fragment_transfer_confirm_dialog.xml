@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_confirm_modal"
+    >
 
     <ImageView
         android:id="@+id/iv_confirm_dialog"
@@ -29,4 +31,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_confirm_dialog"
         tools:text="김철수에게 10,000원을\n이체하시겠습니까?" />
+
+    <TextView
+        android:id="@+id/tv_transfer_account"
+        style="@style/AppTextCaption.S12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_transfer_message"
+        tools:text="농협은행 356 0608 8388 33" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_transfer_cancel"
+        style="@style/AppButtonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btn_label_cancel"
+        app:layout_constraintHorizontal_weight="0.375"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_transfer_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_transfer_account" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_transfer_confirm"
+        style="@style/AppButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_transfer_confirm"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_weight="0.625"
+        app:layout_constraintBottom_toBottomOf="@id/btn_transfer_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_transfer_cancel"
+        app:layout_constraintTop_toTopOf="@id/btn_transfer_cancel" />
 </androidx.constraintlayout.widget.ConstraintLayout>

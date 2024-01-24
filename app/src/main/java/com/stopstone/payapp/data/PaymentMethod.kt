@@ -10,5 +10,5 @@ data class PaymentMethod(
     val validMonth: String,
     val validYear: String,
     val cardName: String,
-    var cardBalance: Long = 0
+    val cardBalance: Long = 0L
 ) : Parcelable

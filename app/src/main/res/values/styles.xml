@@ -9,6 +9,14 @@
         <item name="navigationIcon">@drawable/ic_arrow_back</item>
     </style>
 
+    <style name="AppBottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppBottomSheetModal</item>
+    </style>
+
+    <style name="AppBottomSheetModal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="bottomSheetStyle">@android:color/transparent</item>
+    </style>
+
     <style name="AppEditText">
         <item name="android:textSize">14sp</item>
         <item name="android:paddingTop">14dp</item>
@@ -21,8 +29,7 @@
     </style>
 
     <style name="AppButtonPrimary" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:textColor">@color/selector_button_text_color</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/AppTextOnPrimary.S16.Bold</item>
         <item name="android:background">@drawable/selector_button_background</item>
     </style>
 
@@ -36,6 +43,11 @@
         <item name="android:layout_height">40dp</item>
         <item name="android:textSize">20sp</item>
         <item name="android:background">@drawable/selector_keypad_background</item>
+    </style>
+
+    <style name="AppButtonCancel" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/AppTextHint.Bold.S16</item>
+        <item name="android:background">@drawable/background_gray150</item>
     </style>
 
     <style name="AppButtonKeyPad.Text">
@@ -72,6 +84,14 @@
         <item name="android:textColor">@color/gray_800</item>
     </style>
 
+    <style name="AppTextHint.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextHint.Bold.S16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="AppTextHint.S14">
         <item name="android:textSize">14sp</item>
     </style>
@@ -79,6 +99,10 @@
     <style name="AppTextCaption">
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/gray_300</item>
+    </style>
+
+    <style name="AppTextCaption.S14">
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="AppTextCaption.S12">
@@ -90,6 +114,10 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="AppTextPrimary.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="AppTextOnPrimary">
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">normal</item>
@@ -99,11 +127,19 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="AppTextOnPrimary.S16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="AppTextOnPrimary.S24">
         <item name="android:textSize">24sp</item>
     </style>
 
     <style name="AppTextOnPrimary.S14.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextOnPrimary.S16.Bold">
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -129,4 +165,7 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="AppTextBody.S20">
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

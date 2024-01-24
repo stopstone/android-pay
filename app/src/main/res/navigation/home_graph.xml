@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_home_to_paymentMethodFragment"
             app:destination="@id/navigation_payment_method" />
+        <action
+            android:id="@+id/action_home_to_transfer_detail"
+            app:destination="@id/navigation_transfer_detail" />
     </fragment>
     <fragment
         android:id="@+id/navigation_transfer_account"
@@ -89,5 +92,14 @@
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_home"
             app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_transfer_detail"
+        android:name="com.stopstone.payapp.ui.transferdetail.TransferDetailFragment"
+        android:label="TransferDetailFragment"
+        tools:layout="@layout/fragment_transfer_detail">
+        <argument
+            android:name="transfer"
+            app:argType="com.stopstone.payapp.data.Transfer" />
     </fragment>
 </navigation>

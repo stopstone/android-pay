@@ -4,6 +4,7 @@
     <string name="btn_label_cancel">취소</string>
     <string name="description_payment_success_image">결제수단 등록 성공을 알리는 이미지</string>
     <string name="format_amount_unit">%s원</string>
+    <string name="format_transfer_account">"%1$s %2$s"</string>
 
 
     <!--    Home    -->
@@ -25,7 +26,6 @@
 
     <!--  Transfer confirm dialog  -->
     <string name="format_transfer_info">"%1$s에게 %2$s원을\n이체하시겠습니까?"</string>
-    <string name="format_transfer_account">"%1$s %2$s"</string>
     <string name="btn_transfer_confirm">"이체하기"</string>
 
     <!--    Transfer result  -->
@@ -62,7 +62,15 @@
     <string name="label_number_zero">0</string>
     <string name="description_confirm_dialog_image">송금 앱 로고</string>
     <string name="guide_message_empty_transfer_history">아직 거래 내역이 없어요</string>
+
+    <!--  Transfer Detail  -->
     <string name="appbar_title_transfer_title">이체 상세 내역</string>
+    <string name="label_transfer_receiver">받는분</string>
+    <string name="label_transfer_type">거래 유형</string>
+    <string name="label_transfer_date">일시</string>
+    <string name="label_transfer_balance">거래 후 잔액</string>
+    <string name="label_transfer_account">입금 계좌</string>
+    <string name="label_withdraw">출금</string>
 
 
 </resources>

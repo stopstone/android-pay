@@ -169,6 +169,10 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="AppTextBody.S16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="AppTextBody.S18">
         <item name="android:textSize">18sp</item>
     </style>

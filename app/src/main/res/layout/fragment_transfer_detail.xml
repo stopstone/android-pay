@@ -52,4 +52,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_detail_amount" />
+
+    <com.stopstone.payapp.ui.views.HorizontalTextLayout
+        android:id="@+id/view_transfer_receiver"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_transfer_detail"
+        app:textLabel="@string/label_transfer_receiver" />
+
+    <com.stopstone.payapp.ui.views.HorizontalTextLayout
+        android:id="@+id/view_transfer_type"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_transfer_receiver"
+        app:textLabel="@string/label_transfer_type" />
+
+    <com.stopstone.payapp.ui.views.HorizontalTextLayout
+        android:id="@+id/view_transfer_date"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_transfer_type"
+        app:textLabel="@string/label_transfer_date" />
+
+    <com.stopstone.payapp.ui.views.HorizontalTextLayout
+        android:id="@+id/view_transfer_balance"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_transfer_date"
+        app:textLabel="@string/label_transfer_balance" />
+
+    <com.stopstone.payapp.ui.views.HorizontalTextLayout
+        android:id="@+id/view_transfer_account"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_transfer_balance"
+        app:textLabel="@string/label_transfer_account" />
 </androidx.constraintlayout.widget.ConstraintLayout>

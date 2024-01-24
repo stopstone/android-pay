@@ -8,14 +8,17 @@ import com.stopstone.payapp.data.Transfer
 import com.stopstone.payapp.databinding.ItemTransferHistoryBinding
 import com.stopstone.payapp.ui.extensions.convertThreeDigitComma
 
-class TransferListAdapter(private val items: List<Transfer>) :
+class TransferListAdapter(
+    private val items: List<Transfer>,
+    private val listener: TransferItemClickListener
+) :
     RecyclerView.Adapter<TransferItemViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransferItemViewHolder {
         return TransferItemViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: TransferItemViewHolder, position: Int) {
-        holder.bind(items[position])
+        holder.bind(items[position], listener)
     }
 
     override fun getItemCount(): Int {
@@ -25,8 +28,12 @@ class TransferListAdapter(private val items: List<Transfer>) :
 
 class TransferItemViewHolder(private val binding: ItemTransferHistoryBinding) :
     RecyclerView.ViewHolder(binding.root) {
-    fun bind(transfer: Transfer) {
+    fun bind(transfer: Transfer, listener: TransferItemClickListener) {
         val account = transfer.account
+
+        itemView.setOnClickListener {
+            listener.transferOnClick(transfer)
+        }
 
         with(binding) {
             ivAccountHistoryImage.setImageResource(account.profileResourceId)

@@ -13,8 +13,10 @@ import com.stopstone.payapp.data.Storage
 import com.stopstone.payapp.data.Transfer
 import com.stopstone.payapp.databinding.FragmentHomeBinding
 import com.stopstone.payapp.ui.extensions.convertThreeDigitComma
+import com.stopstone.payapp.ui.transfer.TransferFragmentDirections
+import com.stopstone.payapp.ui.transferaccount.TransferAccountFragmentDirections
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), TransferItemClickListener {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -81,7 +83,7 @@ class HomeFragment : Fragment() {
         with(binding) {
             rvHomeTransferHistory.visibility = VISIBLE
             tvTransferHistory.visibility = GONE
-            rvHomeTransferHistory.adapter = TransferListAdapter(transferHistory)
+            rvHomeTransferHistory.adapter = TransferListAdapter(transferHistory, this@HomeFragment)
         }
     }
 
@@ -95,5 +97,10 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun transferOnClick(transfer: Transfer) {
+        val action = HomeFragmentDirections.actionHomeToTransferDetail(transfer)
+        findNavController().navigate(action)
     }
 }
